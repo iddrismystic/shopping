@@ -1,0 +1,131 @@
+:root{
+    --primaryColor: #82CD47;
+    --light:#f2f2f2 !important;
+    --font:arial;
+    --fontSize:0.9rem;
+    --navWidth:95%;
+    --navHeight:50px;
+    --Deduct: calc(var(--navHeight) + 20);
+    --sideBarWidth:250px;
+}
+*{
+    font-family: var(--font);
+    font-size: var(--fontSize);
+}
+.input{
+padding: 1rem !important;
+border: none;
+width: 100%;
+min-height: 40px;
+border-radius: .2rem;
+outline: none;
+transition: 0.3s linear;
+background-color: var(--light);
+font-weight: bold;
+}
+/* input,select,textarea:active{
+    outline: 1px solid var(--primaryColor);
+} */
+.btn{
+    padding: 1rem;
+    border-radius: .2rem;
+    border: none !important;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.primaryBtn{
+    background-color: var(--primaryColor);
+    color: white;
+}
+.section2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+div.card{
+    background-color: var(--light);
+    padding: 2rem;
+    border-radius: .5rem;
+}
+.row-flex,.row{
+    align-items: center;
+}
+.outlineBtn{
+    border: 1px solid var(--light);
+    padding: .8rem;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: .3rem;
+}
+.outlineBtn:hover{
+    border: 1px solid var(--primaryColor);
+}
+.navigationBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    position: fixed;
+    top: 10px;
+    left: 2.5%;
+    width: var(--navWidth);
+    height: var(--navHeight);
+    z-index: 4;
+    background-color: var(--light);
+}
+.navLink{
+    font-weight: bold;
+    margin: 0 1rem;
+}
+.navigationBar > .logo{
+    margin-right:2rem;
+    font-size: 1.5rem;
+}
+.sideBar{
+position: fixed;
+top: 0;
+left: 0;
+height: 100vh;
+width: var(--sideBarWidth);
+padding: 2rem;
+background-color: var(--light);
+display: none;
+}
+
+.content{
+position: relative;
+top: calc( var(--navHeight) + 20px );
+width: 100%;
+padding: 2rem;
+
+}
+.central{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* add product */
+.addHome{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+/* dashBoard */
+.analyticsCard{
+    transition: 0.3s linear;
+    cursor: pointer;
+    width: 150px;
+    border: 1px solid var(--light);
+    padding: 1rem;
+}
+.analyticsCard:hover{
+    background-color: var(--primaryColor);
+    color: white;
+}
