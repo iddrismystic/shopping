@@ -9,7 +9,7 @@
     --sideBarWidth:250px;
 }
 *{
-    font-family: var(--font);
+
     font-size: var(--fontSize);
 }
 .input{
