@@ -1,20 +1,57 @@
 import Link from "next/link";
+import { useEffect ,useState} from "react";
 const Nav = () => {
+  const [mode, setMode] = useState("")
+const handleMode = ()=>{
+if(document.documentElement.style.getPropertyValue("--backgroundColor") === "black"){
+  document.documentElement.style.setProperty('--backgroundColor', 'white');
+  document.documentElement.style.setProperty('--light', '#f1f1f1');
+  document.documentElement.style.setProperty('--color', '#black');
+  setMode("light")
+  
+}else{
+  document.documentElement.style.setProperty('--backgroundColor', 'black');
+  document.documentElement.style.setProperty('--light', '#212223');
+  document.documentElement.style.setProperty('--color', '#f1f1f1');
+  setMode("black")
+  
+}
+}
     return ( 
         <div>
                 <div className="navigationBar">
-        <div className="logo">
-          Shopping
+        <div>
+          <Link href="/" >
+         <span className="logo">
+         Shopping
+        </span>
+          </Link>
         </div>
+        <div>
         <Link href="/" className='navLink'>
        <i className="icon-home"></i> Home
         </Link>
         <Link href="/product/add" className='navLink'>
         <i className="icon-bag"></i> Add
         </Link>
-        <Link href="/" className='navLink'>
+        <Link href="/products" className='navLink'>
         <i className="icon-tag"></i> products
         </Link>
+        <Link href="/stockin" className='navLink'>
+        <i className="icon-tag"></i> Add Stock
+        </Link>
+        </div>
+        <div>
+          <div className="Avatar" onClick={handleMode}>
+            {
+              mode === "black" ?
+              <i className="lni lni-sun mode"></i>
+              :
+              <i className="lni lni-night mode"></i>
+            }
+        
+          </div>
+        </div>
       </div>
 
       <div className="sideBar">

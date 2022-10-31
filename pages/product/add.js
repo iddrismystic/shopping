@@ -22,7 +22,7 @@ return(
                 <input className="input card" type="text" placeholder="PRODUCT NAME" />
             </div>
             <p>
-            <button className="primaryBtn btn card">
+            <button className="primaryBtn btn">
                 Add Product
             </button>
             </p>

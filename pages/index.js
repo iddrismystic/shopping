@@ -2,11 +2,25 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Nav from '../components/navBar'
-import React, { PureComponent } from 'react';
+import React, { PureComponent, useState } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 export default function Home() {
-  
+  const [getDate, setGetDate] = useState("")
+  const [year, setyear] = useState("")
+  const [month, setmonth] = useState("")
+  const [day, setday] = useState("")
+  const [Docs, setDocs] = useState([])
+
+  const filTerData = ()=>{
+    if(Docs){
+      Docs.filter(filtData =>{
+        if(filtData.month === month && filtData.day === day && filtData.year === year){
+          setDocs(filtData)
+        }
+      })
+    }
+  }
 const data = [
   {
     name: 'Janaury',
@@ -37,6 +51,17 @@ const data = [
     sales: 2400,
   },
 ];
+
+const handleDates  = ()=>{
+setyear(getDate[0])
+setmonth(getDate[1])
+setday(getDate[2])
+}
+
+const handleDate = (e)=>{
+  setGetDate(e.target.value.toString().split("-"))
+  handleDates()
+}
   return (
     <div className='content'>
       <Nav />
@@ -55,13 +80,13 @@ const data = [
         </div>
        <Link href='/'>
        <div className='row-flex outlineBtn'>
-        <i className="icon-cloud-download"></i>  <span className='padding-left-10'>Download Data</span>
+        <i className="icon-cloud-download"></i>  <span>Download Data</span>
         </div>
        </Link>
       </p>
       <p>
         <div className="text-bold">Date</div>
-       <input className='input' type="date" name="" id="" placeholder='Date' />
+       <input className='input' type="date" name="" id="" placeholder='Date' onChange={handleDate} />
       </p>
         </div>
         <p className='padding'>
@@ -71,20 +96,20 @@ const data = [
       </p>
       <div className="row-flex">
         <div className="padding">
-          <div className='analyticsCard'>
+          <div className='analyticsCard card'>
             <div className="text-bold">Monthly Sales</div>
             <p className='h4'>20</p>
           </div>
         </div>
         <div className="padding">
-          <div className='analyticsCard'>
+          <div className='analyticsCard card'>
             <div className="text-bold">Today</div>
             <p className='h4'>20</p>
           </div>
         </div>
       </div>
    
-      <p style={{overflowX:"auto"}}>
+      <p style={{overflowX:"auto"}} className="card">
 
         <BarChart
           width={700}
@@ -97,7 +122,7 @@ const data = [
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="sales" fill="#8884d8" />
+          <Bar dataKey="sales" fill="#82CD47" />
         </BarChart>
       </p>
       </div>
