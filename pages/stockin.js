@@ -7,7 +7,7 @@ const Stockin = () => {
         <Nav />
       <div className="row container">
         <div className="col sm-12 md-6 lg-6 padding">
-            <img src="/addProduct.svg" className="fit" alt="" />
+            <img src="/stock.svg" className="fit" alt="" />
         </div>
         <div className="col sm-12 md-6 lg-6">
         <div className="width-500-max center">
@@ -29,14 +29,17 @@ const Stockin = () => {
                 </select>
                 </div>
                 <div className="col sm-12 md-6 lg-6 padding">
-                <input className="input card" name="number" type="number" placeholder="NUMBER" />
+                <input className="input card" name="number" type="number" placeholder="QUANTITY" />
                 </div>
                 <div className="col sm-12 md-6 lg-6 padding">
-                <input className="input card" name="price" type="number" placeholder="WHOLESALE PRICE" />
+                <input className="input card" name="wholesale" type="number" placeholder="WHOLESALE PRICE" />
                 </div>
                 <div className="col sm-12 md-12 lg-12 padding">
-                <input className="input card" name="total" type="number" placeholder="TOTAL AMOUNT" />
+                <input className="input card" name="retail" type="number" placeholder="RETAIL PRICE" />
                 </div>
+                {/* <div className="col sm-12 md-12 lg-12 padding">
+                <input className="input card" name="total" type="number" placeholder="TOTAL AMOUNT" />
+                </div> */}
                 <div className="col sm-12 md-6 lg-6 padding">
                 <button className="primaryBtn btn full-width">
                 MAKE CHANGES

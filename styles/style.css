@@ -13,7 +13,7 @@
 *::before,::after{
     box-sizing: border-box;
 }
-body{
+body,.modal-content{
     background-color: var(--backgroundColor) !important;
     color: var(--color);
 }
@@ -35,6 +35,7 @@ transition: 0.3s linear;
 background-color: var(--light);
 font-weight: bold;
 border-bottom: none !important;
+color: var(--color);
 }
 .input:focus{
     outline: 1px solid var(--primaryColor);
@@ -175,4 +176,12 @@ padding: 2rem;
 .analyticsCard:hover{
     background-color: var(--primaryColor);
     color: white;
+}
+
+/* receipt */
+.receipt{
+    max-width: 700px;
+    margin: 30px auto;
+    border: 1px solid var(--primaryColor);
+    padding:2rem;
 }

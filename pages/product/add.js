@@ -6,7 +6,7 @@ return(
         <Nav />
       <div className="row container">
         <div className="col sm-12 md-6 lg-6 padding">
-            <img src="/addProduct.svg" className="fit" alt="" />
+            <img src="/add.svg" className="fit" alt="" />
         </div>
         <div className="col sm-12 md-6 lg-6 padding">
         <div className="width-500-max center">

@@ -85,11 +85,46 @@ const handleDate = (e)=>{
        </Link>
       </p>
       <p>
-        <div className="text-bold">Date</div>
-       <input className='input' type="date" name="" id="" placeholder='Date' onChange={handleDate} />
+       <div className="row">
+       <div className="col sm-4 md-4 lg-4">
+        <div className="text-bold">Day</div>
+        <select name="" id="" className='input'>
+        <option value="1">1</option>
+        <option value="1">2</option>
+        <option value="1">3</option>
+        </select>
+        </div>
+        <div className="col sm-4 md-4 lg-4 padding-right-10 padding-left-10">
+        <div className="text-bold">Month</div>
+        <select name="" id="" className='input'>
+          <option value="January">January</option>
+          <option value="February">February</option>
+          <option value="March">March</option>
+          <option value="April">April</option>
+          <option value="May">May</option>
+          <option value="June">June</option>
+          <option value="July">July</option>
+          <option value="August">August</option>
+          <option value="September">September</option>
+          <option value="October">October</option>
+          <option value="November">November</option>
+          <option value="December">December</option>
+        </select>
+        </div>
+        <div className="col sm-4 md-4 lg-4">
+        <div className="text-bold">Year</div>
+        <select name="" id="" className='input'>
+        <option value="1">2022</option>
+        <option value="1">2023</option>
+        <option value="1">2024</option>
+        <option value="1">2025</option>
+        <option value="1">2026</option>
+        </select>
+        </div>
+       </div>
       </p>
         </div>
-        <p className='padding'>
+        {/* <p className='padding'>
         <div className="text-bold">
           Sales For Janaury 2022
         </div>
@@ -107,7 +142,7 @@ const handleDate = (e)=>{
             <p className='h4'>20</p>
           </div>
         </div>
-      </div>
+      </div> */}
    
       <p style={{overflowX:"auto"}} className="card">
 
