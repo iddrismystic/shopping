@@ -124,25 +124,43 @@ const handleDate = (e)=>{
        </div>
       </p>
         </div>
-        {/* <p className='padding'>
-        <div className="text-bold">
-          Sales For Janaury 2022
-        </div>
-      </p>
-      <div className="row-flex">
-        <div className="padding">
-          <div className='analyticsCard card'>
-            <div className="text-bold">Monthly Sales</div>
-            <p className='h4'>20</p>
+      <div className="row section2">
+        <div className="col sm-12 md-4 lg-4">
+        <div className='analyticsCard card'>
+         <div className="cardContent">
+         <div className="text-bold">Total Products</div>
+            <p className='h4'>200</p>
+         </div>
           </div>
         </div>
-        <div className="padding">
-          <div className='analyticsCard card'>
-            <div className="text-bold">Today</div>
-            <p className='h4'>20</p>
+        <div className="col sm-12 md-4 lg-4 padding-right-10 padding-left-10">
+        <div className='analyticsCard card'>
+         <div className="cardContent">
+         <div className="text-bold">Monthly Sales</div>
+            <div className="row-flex">
+            <p className='h4'>200</p>
+            <div className="text-small padding-left-10">
+            45  <i className="icon-arrow-up text-green"></i>
+            </div>
+            </div>
+         </div>
           </div>
         </div>
-      </div> */}
+        <div className="col sm-12 md-4 lg-4">
+        <div className='analyticsCard card'>
+         <div className="cardContent">
+         <div className="text-bold">Daily Sales</div>
+            <div className="row-flex">
+            <p className='h4'>200</p>
+            <div className="text-small padding-left-10">
+            45  <i className="icon-arrow-down text-red"></i>
+            </div>
+            </div>
+         </div>
+          </div>
+        </div>
+
+      </div>
    
       <p style={{overflowX:"auto"}} className="card">
 

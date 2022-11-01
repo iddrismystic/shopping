@@ -24,6 +24,9 @@ body,.modal-content{
 .spiralLeft{
 
 }
+.row-flex{
+    text-align: center;
+}
 .input{
 padding: 1rem !important;
 border: none;
@@ -169,13 +172,17 @@ padding: 2rem;
 .analyticsCard{
     transition: 0.3s linear;
     cursor: pointer;
-    width: 150px;
     border: 1px solid var(--light);
     padding: 1rem;
+    border: 1px solid var(--primaryColor);
+
+}
+.analyticsCard > .cardContent{
+    width: 150px;
+    margin: 0 auto;
 }
 .analyticsCard:hover{
-    background-color: var(--primaryColor);
-    color: white;
+ 
 }
 
 /* receipt */
