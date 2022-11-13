@@ -1,6 +1,18 @@
 import Nav from "../../components/navBar";
+import { useState } from 'react';
+import Axios from 'axios';
+import endpoint from "../../database/endpoint";
 
 export default function Add(){
+    const [product , setproduct] = useState("")
+    const addProduct = ()=>{
+        Axios.post(endpoint + "/products", {product:product})
+        .then(()=>{
+            alert("successfully added product")
+         window.location.reload()
+        })
+        .catch(err=>alert(err.message))
+    }
 return(
     <div className="addHome">
         <Nav />
@@ -19,10 +31,10 @@ return(
                 </p>
             </p>
             <div className="section2">
-                <input className="input card" type="text" placeholder="PRODUCT NAME" />
+                <input className="input card" type="text" placeholder="PRODUCT NAME" onChange={(e)=>setproduct(e.target.value)} />
             </div>
             <p>
-            <button className="primaryBtn btn">
+            <button className="primaryBtn btn" onClick={addProduct}>
                 Add Product
             </button>
             </p>

@@ -1,19 +1,39 @@
 import Link from "next/link";
 import { useEffect ,useState} from "react";
 const Nav = () => {
-  const [mode, setMode] = useState("")
+  const [mode, setmode] = useState("")
+ const getMode = ()=>{
+  if(localStorage.getItem("darkMode")){
+    if(localStorage.getItem("darkMode") === true){
+    setmode("dark")
+    document.documentElement.style.setProperty('--backgroundColor', 'black');
+    document.documentElement.style.setProperty('--light', '#212223');
+    document.documentElement.style.setProperty('--color', '#f1f1f1');
+    }else{
+      setmode("light")
+      document.documentElement.style.setProperty('--backgroundColor', 'white');
+      document.documentElement.style.setProperty('--light', '#f1f1f1');
+      document.documentElement.style.setProperty('--color', '#black');
+    }
+  }else{
+    localStorage.setItem("darkMode" , false)
+  }
+}
+
+useEffect(()=>{
+  getMode()
+},[])
+
 const handleMode = ()=>{
 if(document.documentElement.style.getPropertyValue("--backgroundColor") === "black"){
-  document.documentElement.style.setProperty('--backgroundColor', 'white');
-  document.documentElement.style.setProperty('--light', '#f1f1f1');
-  document.documentElement.style.setProperty('--color', '#black');
-  setMode("light")
+  // setMode("light")
+  localStorage.setItem("darkMode" , false)
+  getMode()
   
 }else{
-  document.documentElement.style.setProperty('--backgroundColor', 'black');
-  document.documentElement.style.setProperty('--light', '#212223');
-  document.documentElement.style.setProperty('--color', '#f1f1f1');
-  setMode("black")
+  // setMode("black")
+  localStorage.setItem("darkMode" , true)
+  getMode()
   
 }
 }

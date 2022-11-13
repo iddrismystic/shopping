@@ -1,0 +1,92 @@
+{
+  "products": [
+    {
+      "product": "Gari",
+      "id": 1
+    },
+    {
+      "product": "Milo",
+      "id": 2
+    },
+    {
+      "product": "Tea",
+      "id": 3
+    },
+    {
+      "product": "Nike",
+      "id": 4
+    }
+  ],
+  "stock": [
+    {
+      "date": "2022-11-16",
+      "product": "Gari",
+      "quantity": 9,
+      "wholeSale": "50",
+      "retail": "30",
+      "id": 1
+    },
+    {
+      "date": "2022-11-22",
+      "product": "Nike",
+      "quantity": 17,
+      "wholeSale": "500",
+      "retail": "560",
+      "id": 2
+    },
+    {
+      "date": "2022-11-15",
+      "product": "Tea",
+      "quantity": 7,
+      "wholeSale": "37",
+      "retail": "20",
+      "id": 3
+    }
+  ],
+  "sales": [
+    {
+      "key": "30:19:21",
+      "productId": 3,
+      "product": "Tea",
+      "price": 10,
+      "day": 11,
+      "month": 11,
+      "year": 2022,
+      "time": "0:19:21",
+      "id": 1
+    },
+    {
+      "key": "20:21:3",
+      "productId": 2,
+      "product": "Nike",
+      "price": 10,
+      "day": 12,
+      "month": 11,
+      "year": 2022,
+      "time": "0:21:3",
+      "id": 2
+    },
+    {
+      "key": "20:24:55",
+      "productId": 2,
+      "product": "Nike",
+      "price": 10,
+      "day": 12,
+      "month": 11,
+      "year": 2022,
+      "time": "0:24:55",
+      "id": 3
+    },
+    {
+      "key": "20:25:11",
+      "productId": 2,
+      "product": "Nike",
+      "price": 10,
+      "day": 12,
+      "month": 11,
+      "year": 2022,
+      "time": "0:25:11",
+      "id": 4
+    }
+  ]
+}
